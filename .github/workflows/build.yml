@@ -26,7 +26,7 @@ jobs:
           BRANCH: main
           FOLDER: coverage
           CLEAN: true
-          TARGET_FOLDER: coverage
+          TARGET_FOLDER: docs/coverage
       - name: Build documentation 🏗️
         run: yarn build-storybook
       - name: Deploy 🚀

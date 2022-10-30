@@ -19,6 +19,14 @@ jobs:
         run: yarn install
       - name: Test 🧪
         run: yarn test
+      - name: Coverage 🚀
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          BRANCH: main
+          FOLDER: coverage
+          CLEAN: true
+          TARGET_FOLDER: coverage
       - name: Build documentation 🏗️
         run: yarn build-storybook
       - name: Deploy 🚀

@@ -1,4 +1,4 @@
-name: [Docs]: Build and Deploy
+name: Perform build and deploy of storybook documentation
 on:
   push:
 jobs:

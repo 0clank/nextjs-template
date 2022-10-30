@@ -20,6 +20,7 @@ jobs:
       - name: Test 🧪
         run: yarn test
       - name: Coverage 🚀
+        run: yarn test
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
@@ -33,7 +34,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          BRANCH: main # The branch the action should deploy to.
-          FOLDER: docs-build # The folder that the build-storybook script generates files.
-          CLEAN: true # Automatically remove deleted files from the deploy branch
-          TARGET_FOLDER: docs # The folder that we serve our Storybook files from
+          BRANCH: main
+          FOLDER: docs-build
+          CLEAN: true
+          TARGET_FOLDER: docs

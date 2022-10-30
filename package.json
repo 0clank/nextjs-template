@@ -13,7 +13,7 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "storybook-build": "build-storybook",
+    "build-storybook": "build-storybook -o docs-build -s ./stories/assets",
     "test": "jest",
     "test-watch": "jest --watch"
   },

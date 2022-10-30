@@ -20,7 +20,6 @@ jobs:
       - name: Test 🧪
         run: yarn test
       - name: Coverage 🚀
-        run: yarn test
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}

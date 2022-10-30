@@ -3,7 +3,10 @@ on:
   push:
     branches:
       - main
-    paths: ["!docs/**"]
+    paths-ignore:
+      - 'coverage/**'
+      - 'dist/**'
+      - 'docs/**'
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

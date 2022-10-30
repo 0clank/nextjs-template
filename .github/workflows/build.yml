@@ -23,7 +23,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          BRANCH: main
+          BRANCH: docs
           FOLDER: coverage
           CLEAN: true
           TARGET_FOLDER: coverage
@@ -33,7 +33,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          BRANCH: main
+          BRANCH: docs
           FOLDER: docs-build
           CLEAN: true
           TARGET_FOLDER: docs

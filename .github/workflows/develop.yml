@@ -1,10 +1,11 @@
-name: Build and Deploy
+name: Main Build and Deploy
 on:
   push:
     branches:
-      - main
+      - develop
     paths-ignore:
       - 'coverage/**'
+      - 'reports/**'
       - 'dist/**'
       - 'docs/**'
 jobs:
@@ -23,17 +24,17 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          BRANCH: docs
-          FOLDER: coverage
+          BRANCH: develop
+          FOLDER: repots
           CLEAN: true
           TARGET_FOLDER: coverage
       - name: Build documentation 🏗️
         run: yarn build-storybook
-      - name: Deploy 🚀
+      - name: Deploy documentation 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          BRANCH: docs
+          BRANCH: develop
           FOLDER: docs-build
           CLEAN: true
           TARGET_FOLDER: docs

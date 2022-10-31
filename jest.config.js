@@ -1,6 +1,7 @@
 // jest.config.js
 module.exports = {
     collectCoverage: true,
+    coverageDirectory: "<rootDir>/reports",
     // on node 14.x coverage provider v8 offers good speed and more or less good report
     coverageProvider: 'v8',
     collectCoverageFrom: [

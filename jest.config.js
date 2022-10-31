@@ -6,6 +6,7 @@ module.exports = {
     coverageProvider: 'v8',
     collectCoverageFrom: [
         './src/**/*.{js,jsx,ts,tsx}',
+        '!**/*.stories.{js,jsx,ts,tsx}',
         '!**/*.d.ts',
         '!**/node_modules/**',
         '!<rootDir>/out/**',

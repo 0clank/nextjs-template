@@ -25,7 +25,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           BRANCH: main
-          FOLDER: repots
+          FOLDER: reports
           CLEAN: true
           TARGET_FOLDER: coverage
       - name: Build documentation 🏗️

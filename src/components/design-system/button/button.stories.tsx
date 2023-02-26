@@ -3,29 +3,23 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Button } from './button';
 
 export default {
-    title: 'Example/Button',
+    title: 'Button',
     component: Button,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const story: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const PrimaryFilled = story.bind({});
+PrimaryFilled.args = {
     schema: "primary",
-    label: 'Button',
+    text: "Button-Text"
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
+export const SecondaryFilled = story.bind({});
+SecondaryFilled.args = {
     schema: "secondary",
-    label: 'Button',
-};
-
-export const Custom = Template.bind({});
-Custom.args = {
-    schema: "custom",
-    label: 'Button',
+    text: "Button-Text"
 };
